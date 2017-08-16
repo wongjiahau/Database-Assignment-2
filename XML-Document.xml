@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<DVDStore>
+<DVDStore xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <DVDList>
     <DVD dvd_id="d1">
       <title>Spiderman1</title>
-      <format>DVD</format>
+      <format>DV</format>
       <genre>Action</genre>
       <keyStarFeatured></keyStarFeatured>
       <yearReleased>2002</yearReleased>
@@ -32,7 +32,7 @@
   </CustomerList>
 
   <OrderList>
-    <Order order_id="o1" customer_id="""c1" datetime="2002/09/10">
+    <Order order_id="o1" customer_id="c1" datetime="2002/09/10">
       <ItemList>
         <Item dvd_id="d1" quantity="1"/>
         <Item dvd_id="d2" quantity="2"/>
