@@ -50,7 +50,7 @@
         <xs:element name="CustomerList" minOccurs="1" maxOccurs="1">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="Customer">
+              <xs:element name="Customer" minOccurs="1" maxOccurs="unbounded">
                 <xs:complexType>
                   <xs:sequence>
                     <xs:element name="name">
@@ -91,7 +91,13 @@
                       </xs:complexType>
                     </xs:element>
                   </xs:sequence>
-                  <xs:attribute name="customer_id" use="required"></xs:attribute>
+                  <xs:attribute name="customer_id" use="required">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:pattern value="[c][0-9]+"/>
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:attribute>
                 </xs:complexType>
               </xs:element>
             </xs:sequence>            
@@ -100,7 +106,33 @@
         <xs:element name="OrderList">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="Order"></xs:element>
+              <xs:element name="Order" minOccurs="1" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="ItemList" minOccurs="1" maxOccurs="1">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="Item" minOccurs="1" maxOccurs="unbounded">
+                            <xs:complexType>
+                              <xs:attribute name="dvd_id" type="xs:string" use="required"></xs:attribute>
+                              <xs:attribute name="quantity" type="xs:integer" use="required"></xs:attribute>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                  <xs:attribute name="order_id" use="required">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:pattern value="[o][0-9]+"/>
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:attribute>
+                  <xs:attribute name="customer_id" use="required" type="xs:string"></xs:attribute>
+                  <xs:attribute name="dateTime" use="required" type="xs:dateTime"></xs:attribute>                 
+                </xs:complexType>
+              </xs:element>              
             </xs:sequence>
           </xs:complexType>
         </xs:element>
