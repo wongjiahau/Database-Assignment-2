@@ -3,7 +3,7 @@
   <xs:element name="DVDStore">
     <xs:complexType>      
       <xs:sequence>
-        <xs:element name="DVDList">
+        <xs:element name="DVDList" minOccurs="1" maxOccurs="1">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="DVD" minOccurs="1" maxOccurs="unbounded">
@@ -46,6 +46,37 @@
               </xs:element>
             </xs:sequence>
           </xs:complexType>
+        </xs:element>
+        <xs:element name="CustomerList" minOccurs="1" maxOccurs="1">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Customer">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="name">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:pattern value="^[\p{L}\s'.-]+$"></xs:pattern>
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="postAddress" type="xs:string"></xs:element>
+                    <xs:element name="email" type="xs:string"></xs:element>
+                    <xs:element name="dateOfBirth" type="xs:date"></xs:element>
+                    <xs:element name="dateJoined" type="xs:date"></xs:element>
+                    <xs:element name="ratingList">
+                      <xs:complexType>
+                        <xs:sequence>
+                          
+                        </xs:sequence>
+                      </xs:complexType>                      
+                    </xs:element>
+                  </xs:sequence>
+                  <xs:attribute name="customer_id" use="required"></xs:attribute>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>            
+          </xs:complexType>    
         </xs:element>
       </xs:sequence>
     </xs:complexType>
