@@ -32,7 +32,7 @@
   </CustomerList>
 
   <OrderList>
-    <Order order_id="o1" customer_id="""c1" datetime="2002/09/10">
+    <Order order_id="o1" customer_id="c1" datetime="2002/09/10">
       <ItemList>
         <Item dvd_id="d1" quantity="1"/>
         <Item dvd_id="d2" quantity="2"/>
