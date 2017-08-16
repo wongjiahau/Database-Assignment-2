@@ -7,6 +7,8 @@
       <genre>Action</genre>
       <keyStarsFeatured>
         <Star  Name=" Tobey Maguire"></Star>
+        <Star  Name=" Kirsten Dunst"></Star>
+        <Star  Name="  Willem Dafoe"></Star>
       </keyStarsFeatured>
       <yearReleased>2002</yearReleased>
       <cost>20</cost>
@@ -16,12 +18,12 @@
   </DVDList>
 
   <CustomerList>
-    <Customer custome_id="c1">
+    <Customer customer_id="c1">
       <name>Wong Ah Kau</name>
       <postAddress>16,Jalan Hock lee, Taman Ipoh, 31400, Ipoh, Perak </postAddress>
       <email>AhKau@gmail.com</email>
       <dateofBirth>1970-10-19</dateofBirth>
-      <dateofJoin>2000-07-07</dateofJoin>
+      <dateJoin>2000-07-07</dateJoin>
       <ratingList>
         <rating dvd_id="d1" value="3" dateTime="2002-09-12"/>
         <rating dvd_id="d2" value="2" dateTime="2002-09-11"/>
