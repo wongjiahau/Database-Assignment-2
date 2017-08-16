@@ -67,9 +67,28 @@
                     <xs:element name="ratingList">
                       <xs:complexType>
                         <xs:sequence>
-                          
+                          <xs:element name="rating">
+                            <xs:complexType>
+                              <xs:attribute name="dvd_id" type="xs:string"></xs:attribute>
+                              <xs:attribute name="value" type="xs:integer"></xs:attribute>
+                              <xs:attribute name="dateTime" type="xs:dateTime"></xs:attribute>                              
+                            </xs:complexType>
+                          </xs:element>
                         </xs:sequence>
                       </xs:complexType>                      
+                    </xs:element>
+                    <xs:element name="commentList">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="comment">
+                            <xs:complexType>
+                              <xs:attribute name="dvd_id" type="xs:string"></xs:attribute>
+                              <xs:attribute name="comment" type="xs:string"></xs:attribute>
+                              <xs:attribute name="dateTime" type="xs:dateTime"></xs:attribute>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
                     </xs:element>
                   </xs:sequence>
                   <xs:attribute name="customer_id" use="required"></xs:attribute>
