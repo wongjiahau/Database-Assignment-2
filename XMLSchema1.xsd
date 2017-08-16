@@ -21,7 +21,11 @@
         <xs:element name="keyStarsFeatured">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="Star" type="xs:string" minOccurs="1" maxOccurs="unbounded" />
+              <xs:element name="Star" minOccurs="1" maxOccurs="unbounded">                
+                <xs:complexType>
+                  <xs:attribute name="Name" type="xs:string" use="required"></xs:attribute>
+                </xs:complexType>
+              </xs:element>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
