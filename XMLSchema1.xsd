@@ -64,18 +64,18 @@
                     <xs:element name="email" type="xs:string"></xs:element>
                     <xs:element name="dateOfBirth" type="xs:date"></xs:element>
                     <xs:element name="dateJoined" type="xs:date"></xs:element>
-                    <xs:element name="ratingList" minOccurs="0" maxOccurs="unbounded">
+                    <xs:element name="ratingList">
                       <xs:complexType>
                         <xs:sequence>
-                          <xs:element name="rating">
+                          <xs:element name="rating" minOccurs="0" maxOccurs="unbounded">
                             <xs:complexType>
                               <xs:attribute name="dvd_id" type="xs:string"></xs:attribute>
                               <xs:attribute name="value" type="xs:integer"></xs:attribute>
-                              <xs:attribute name="dateTime" type="xs:dateTime"></xs:attribute>                              
+                              <xs:attribute name="dateTime" type="xs:dateTime"></xs:attribute>
                             </xs:complexType>
                           </xs:element>
                         </xs:sequence>
-                      </xs:complexType>                      
+                      </xs:complexType>
                     </xs:element>
                     <xs:element name="commentList">
                       <xs:complexType>
@@ -96,6 +96,13 @@
               </xs:element>
             </xs:sequence>            
           </xs:complexType>    
+        </xs:element>
+        <xs:element name="OrderList">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Order"></xs:element>
+            </xs:sequence>
+          </xs:complexType>
         </xs:element>
       </xs:sequence>
     </xs:complexType>
