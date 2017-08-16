@@ -3,12 +3,14 @@
   <DVDList>
     <DVD dvd_id="d1">
       <title>Spiderman1</title>
-      <format>DV</format>
+      <format>DVD</format>
       <genre>Action</genre>
-      <keyStarFeatured></keyStarFeatured>
+      <keyStarsFeatured>
+        <Star  Name=" Tobey Maguire"></Star>
+      </keyStarsFeatured>
       <yearReleased>2002</yearReleased>
       <cost>20</cost>
-      <datePurchased>2002/08/12</datePurchased>
+      <datePurchased>2002-08-12</datePurchased>
       <purchaseQuantity>10</purchaseQuantity>
     </DVD>
   </DVDList>
@@ -18,21 +20,21 @@
       <name>Wong Ah Kau</name>
       <postAddress>16,Jalan Hock lee, Taman Ipoh, 31400, Ipoh, Perak </postAddress>
       <email>AhKau@gmail.com</email>
-      <dateofBirth>1970/10/19</dateofBirth>
-      <dateofJoin>2000/07/07</dateofJoin>
+      <dateofBirth>1970-10-19</dateofBirth>
+      <dateofJoin>2000-07-07</dateofJoin>
       <ratingList>
-        <rating dvd_id="d1" value="3" dateTime="2002/09/12"/>
-        <rating dvd_id="d2" value="2" dateTime="2002/09/11"/>
+        <rating dvd_id="d1" value="3" dateTime="2002-09-12"/>
+        <rating dvd_id="d2" value="2" dateTime="2002-09-11"/>
       </ratingList>
       <commentList>
-        <comment dvd_id="d1" comment="good" dateTime="2002/09/12"/>
-        <comment dvd_id="d2" comment="okok" dateTime="2002/09/11"/>
+        <comment dvd_id="d1" comment="good" dateTime="2002-09-12"/>
+        <comment dvd_id="d2" comment="okok" dateTime="2002-09-11"/>
       </commentList>
     </Customer>
   </CustomerList>
 
   <OrderList>
-    <Order order_id="o1" customer_id="c1" datetime="2002/09/10">
+    <Order order_id="o1" customer_id="c1" datetime="2002-09-10">
       <ItemList>
         <Item dvd_id="d1" quantity="1"/>
         <Item dvd_id="d2" quantity="2"/>
