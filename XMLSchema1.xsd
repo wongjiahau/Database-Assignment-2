@@ -64,7 +64,7 @@
                     <xs:element name="email" type="xs:string"></xs:element>
                     <xs:element name="dateOfBirth" type="xs:date"></xs:element>
                     <xs:element name="dateJoined" type="xs:date"></xs:element>
-                    <xs:element name="ratingList">
+                    <xs:element name="ratingList" minOccurs="0" maxOccurs="unbounded">
                       <xs:complexType>
                         <xs:sequence>
                           <xs:element name="rating">
@@ -80,7 +80,7 @@
                     <xs:element name="commentList">
                       <xs:complexType>
                         <xs:sequence>
-                          <xs:element name="comment">
+                          <xs:element name="comment" minOccurs="0" maxOccurs="unbounded">
                             <xs:complexType>
                               <xs:attribute name="dvd_id" type="xs:string"></xs:attribute>
                               <xs:attribute name="comment" type="xs:string"></xs:attribute>
