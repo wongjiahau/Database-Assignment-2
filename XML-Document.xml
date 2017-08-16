@@ -29,14 +29,14 @@
         <rating dvd_id="d2" value="2" dateTime="2002-09-11T10:10:09"/>
       </ratingList>
       <commentList>
-        <comment dvd_id="d1" comment="good" dateTime="2002-09-12T20:10:11"/>
+        <comment dvd_id="d1" comment="good" dateTime="2002-09-12T23:10:11"/>
         <comment dvd_id="d2" comment="okok" dateTime="2002-09-11T03:01:05"/>
       </commentList>
     </Customer>
   </CustomerList>
 
   <OrderList>
-    <Order order_id="o1" customer_id="c1" datetime="2002-09-10">
+    <Order order_id="o1" customer_id="c1" dateTime="2002-09-10T05:17:55">
       <ItemList>
         <Item dvd_id="d1" quantity="1"/>
         <Item dvd_id="d2" quantity="2"/>
