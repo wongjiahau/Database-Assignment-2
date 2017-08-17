@@ -72,7 +72,7 @@
       </ItemList>
     </Order>
 
-    <Order order_id="o2" customer_id="c1" dateTime="2002-09-10T05:17:55">
+    <Order order_id="o2" customer_id="c2" dateTime="2002-09-10T05:17:55">
       <ItemList>
         <Item dvd_id="d1" quantity="1"/>
         <Item dvd_id="d2" quantity="2"/>
