@@ -30,7 +30,6 @@
       <purchaseQuantity>10</purchaseQuantity>
     </DVD>
   </DVDList>
-
   <CustomerList>
     <Customer customer_id="c1">
       <name>Wong Ah Kau</name>
