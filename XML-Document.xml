@@ -33,6 +33,22 @@
         <comment dvd_id="d2" comment="okok" dateTime="2002-09-11T03:01:05"/>
       </commentList>
     </Customer>
+  
+    <Customer customer_id="c1">
+      <name>Wong Ah Kau</name>
+      <postAddress>16,Jalan Hock lee, Taman Ipoh, 31400, Ipoh, Perak </postAddress>
+      <email>AhKau@gmail.com</email>
+      <dateOfBirth>1970-10-19</dateOfBirth>
+      <dateJoined>2000-07-07</dateJoined>
+      <ratingList>
+        <rating dvd_id="d1" value="3" dateTime="2002-09-12T09:00:01"/>
+        <rating dvd_id="d2" value="2" dateTime="2002-09-11T10:10:09"/>
+      </ratingList>
+      <commentList>
+        <comment dvd_id="d1" comment="good" dateTime="2002-09-12T23:10:11"/>
+        <comment dvd_id="d2" comment="okok" dateTime="2002-09-11T03:01:05"/>
+      </commentList>
+    </Customer>
   </CustomerList>
 
   <OrderList>

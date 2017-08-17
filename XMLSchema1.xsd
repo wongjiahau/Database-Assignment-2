@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:element name="DVDStore">
-    <xs:complexType>      
+    <xs:complexType>
       <xs:sequence>
         <xs:element name="DVDList" minOccurs="1" maxOccurs="1">
           <xs:complexType>
@@ -43,6 +43,10 @@
                     </xs:simpleType>
                   </xs:attribute>
                 </xs:complexType>
+                <xs:key name="PK_dvd_id">
+                  <xs:selector xpath="DVDstore/DVDList/DVD"/>
+                  <xs:field xpath="@dvd_id" />
+                </xs:key>
               </xs:element>
             </xs:sequence>
           </xs:complexType>
@@ -100,12 +104,12 @@
                   </xs:attribute>
                 </xs:complexType>
                 <xs:key name="PK_CustomerId">
-                  <xs:selector xpath="DVDstore/DVDList/CustomerList/Customer" />
-                  <xs:field xpath="name" />
+                  <xs:selector xpath="DVDStore/CustomerList/Customer"/>
+                  <xs:field xpath="@customer_id" />
                 </xs:key>
               </xs:element>
-            </xs:sequence>            
-          </xs:complexType>    
+            </xs:sequence>
+          </xs:complexType>
         </xs:element>
         <xs:element name="OrderList">
           <xs:complexType>
@@ -134,9 +138,9 @@
                     </xs:simpleType>
                   </xs:attribute>
                   <xs:attribute name="customer_id" use="required" type="xs:string"></xs:attribute>
-                  <xs:attribute name="dateTime" use="required" type="xs:dateTime"></xs:attribute>                 
+                  <xs:attribute name="dateTime" use="required" type="xs:dateTime"></xs:attribute>
                 </xs:complexType>
-              </xs:element>              
+              </xs:element>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
