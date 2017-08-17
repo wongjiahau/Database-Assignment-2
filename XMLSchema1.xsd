@@ -99,6 +99,10 @@
                     </xs:simpleType>
                   </xs:attribute>
                 </xs:complexType>
+                <xs:key name="PK_CustomerId">
+                  <xs:selector xpath="DVDstore/DVDList/CustomerList/Customer" />
+                  <xs:field xpath="name" />
+                </xs:key>
               </xs:element>
             </xs:sequence>            
           </xs:complexType>    
