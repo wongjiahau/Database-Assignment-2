@@ -1,6 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<DVDStore xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <DVDList>
+<DVDStore xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="XMLSchema1.xsd"
+          >
+  <DVDList>  
     <DVD dvd_id="d2">
       <title>Spiderman1</title>
       <format>DVD</format>
