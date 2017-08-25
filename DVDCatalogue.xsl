@@ -4,7 +4,7 @@
 <xsl:template match="/">
 <html>
 <head>
-	<title>DVD Catalogue</title>
+	<title>Order </title>
 </head>
 <body>
   <h1 style="text-align: center;" >DVD Catalog</h1>
@@ -21,6 +21,7 @@
       <th>Purchase Quantity</th>
     </tr>
       <xsl:for-each select="DVDStore/DVDList/DVD">
+      <xsl:sort select="title"></xsl:sort>
     	<tr>
         	<td><xsl:value-of select="@dvd_id" /></td>
         	<td><xsl:value-of select="title" /></td>
