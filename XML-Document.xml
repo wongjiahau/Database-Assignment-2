@@ -3,20 +3,6 @@
           xsi:noNamespaceSchemaLocation="XMLSchema1.xsd"
           >
   <DVDList>  
-    <DVD dvd_id="d2">
-      <title>Spiderman1</title>
-      <format>DVD</format>
-      <genre>Action</genre>
-      <keyStarsFeatured>
-        <Star  Name=" Tobey Maguire"></Star>
-        <Star  Name=" Kirsten Dunst"></Star>
-        <Star  Name="  Willem Dafoe"></Star>
-      </keyStarsFeatured>
-      <yearReleased>2002</yearReleased>
-      <cost>20</cost>
-      <datePurchased>2002-08-12</datePurchased>
-      <purchaseQuantity>10</purchaseQuantity>
-    </DVD>
     <DVD dvd_id="d1">
       <title>Spiderman1</title>
       <format>DVD</format>
@@ -31,14 +17,141 @@
       <datePurchased>2002-08-12</datePurchased>
       <purchaseQuantity>10</purchaseQuantity>
     </DVD>
+    <DVD dvd_id="d2">
+      <title>Hacksaw Ridge</title>
+      <format>Bluray</format>
+      <genre>Biography</genre>
+      <keyStarsFeatured>
+        <Star  Name=" Andrew Garfield"></Star>
+        <Star  Name=" Sam Worthington"></Star>
+        <Star  Name="  Luke Bracey"></Star>
+      </keyStarsFeatured>
+      <yearReleased>2016</yearReleased>
+      <cost>25</cost>
+      <datePurchased>2017-02-15</datePurchased>
+      <purchaseQuantity>8</purchaseQuantity>
+    </DVD>
+    <DVD dvd_id="d3">
+      <title>Fast And Furious 6</title>
+      <format>DVD</format>
+      <genre>Action</genre>
+      <keyStarsFeatured>
+        <Star  Name=" Vin Diesel"></Star>
+        <Star  Name=" Paul Walker"></Star>
+        <Star  Name="  Dwayne Johnson"></Star>
+      </keyStarsFeatured>
+      <yearReleased>2013</yearReleased>
+      <cost>18</cost>
+      <datePurchased>2015-09-21</datePurchased>
+      <purchaseQuantity>12</purchaseQuantity>
+    </DVD>
+    <DVD dvd_id="d4">
+      <title>Baywatch</title>
+      <format>DVD</format>
+      <genre>Comedy</genre>
+      <keyStarsFeatured>
+        <Star  Name=" Dwayne Johnson"></Star>
+        <Star  Name=" Zac Efron"></Star>
+        <Star  Name="  Alexandra Daddario"></Star>
+      </keyStarsFeatured>
+      <yearReleased>2017</yearReleased>
+      <cost>15</cost>
+      <datePurchased>2017-06-12</datePurchased>
+      <purchaseQuantity>18</purchaseQuantity>
+    </DVD>
+    <DVD dvd_id="d5">
+      <title>The Mummy</title>
+      <format>Bluray</format>
+      <genre>Adventure</genre>
+      <keyStarsFeatured>
+        <Star  Name=" Tom Cruise"></Star>
+        <Star  Name=" Sofia Boutella"></Star>
+        <Star  Name="  Annabelle Wallis"></Star>
+      </keyStarsFeatured>
+      <yearReleased>2017</yearReleased>
+      <cost>22</cost>
+      <datePurchased>2017-07-22</datePurchased>
+      <purchaseQuantity>10</purchaseQuantity>
+    </DVD>
+    <DVD dvd_id="d6">
+      <title>The Wolf Of Wall Street</title>
+      <format>DVD</format>
+      <genre>Biography</genre>
+      <keyStarsFeatured>
+        <Star  Name=" Leonardo DiCaprio"></Star>
+        <Star  Name=" Jonah Hill"></Star>
+        <Star  Name="  Margot Robbie"></Star>
+      </keyStarsFeatured>
+      <yearReleased>2013</yearReleased>
+      <cost>14</cost>
+      <datePurchased>2014-01-10</datePurchased>
+      <purchaseQuantity>10</purchaseQuantity>
+    </DVD>
+    <DVD dvd_id="d7">
+      <title>Gone Girl</title>
+      <format>DVD</format>
+      <genre>Mystery</genre>
+      <keyStarsFeatured>
+        <Star  Name=" Ben Affleck"></Star>
+        <Star  Name=" Rosamund Pike"></Star>
+        <Star  Name="  Neil Patrick Harris"></Star>
+      </keyStarsFeatured>
+      <yearReleased>2014</yearReleased>
+      <cost>20</cost>
+      <datePurchased>2015-12-10</datePurchased>
+      <purchaseQuantity>12</purchaseQuantity>
+    </DVD>
+    <DVD dvd_id="d8">
+      <title>Annabelle</title>
+      <format>Bluray</format>
+      <genre>Horror</genre>
+      <keyStarsFeatured>
+        <Star  Name=" Ward Horton"></Star>
+        <Star  Name=" Annabelle Wallis"></Star>
+        <Star  Name="  Alfre Woodard"></Star>
+      </keyStarsFeatured>
+      <yearReleased>2014</yearReleased>
+      <cost>14</cost>
+      <datePurchased>2014-04-04</datePurchased>
+      <purchaseQuantity>15</purchaseQuantity>
+    </DVD>
+    <DVD dvd_id="d9">
+      <title>Batman Begins</title>
+      <format>DVD</format>
+      <genre>Action</genre>
+      <keyStarsFeatured>
+        <Star  Name=" Christian Bale"></Star>
+        <Star  Name=" Michael Caine"></Star>
+        <Star  Name="  Ken Watanabe"></Star>
+      </keyStarsFeatured>
+      <yearReleased>2005</yearReleased>
+      <cost>10</cost>
+      <datePurchased>2011-10-09</datePurchased>
+      <purchaseQuantity>5</purchaseQuantity>
+    </DVD>
+    <DVD dvd_id="d10">
+      <title>Star Wars 1</title>
+      <format>DVD</format>
+      <genre>Adventure</genre>
+      <keyStarsFeatured>
+        <Star  Name=" Ewan McGregor"></Star>
+        <Star  Name=" Liam Neeson"></Star>
+        <Star  Name="  Natalie Portman"></Star>
+      </keyStarsFeatured>
+      <yearReleased>2005</yearReleased>
+      <cost>10</cost>
+      <datePurchased>2007-11-19</datePurchased>
+      <purchaseQuantity>5</purchaseQuantity>
+    </DVD>
   </DVDList>
+  
   <CustomerList>
     <Customer customer_id="c1">
       <name>Wong Ah Kau</name>
       <postAddress>16,Jalan Hock lee, Taman Ipoh, 31400, Ipoh, Perak </postAddress>
       <email>AhKau@gmail.com</email>
       <dateOfBirth>1970-10-19</dateOfBirth>
-      <dateJoined>2000-07-07</dateJoined>
+      <dateJoined>2000-09-07</dateJoined>
       <ratingList>
         <rating dvd_id="d1" value="3" dateTime="2002-09-12T09:00:01"/>
         <rating dvd_id="d2" value="2" dateTime="2002-09-11T10:10:09"/>
