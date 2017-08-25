@@ -9,11 +9,17 @@ Queries:
 4. Number of comments for DVD whichever has 3 star rating or above.
 
 5. DVDs with same genre released between specific range of years.
+
     Action (2002~2003)
+
     Adventure (2005~2007)
+    
     Biography (2000~2003)
+  
     Comedy (2007)
+    
     Horror (2004)
+    
     Mystery (2004)
 
 6. DVDs which title contains particular alphabets between specific range of years.
