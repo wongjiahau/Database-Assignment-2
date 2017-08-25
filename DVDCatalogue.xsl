@@ -4,7 +4,7 @@
 <xsl:template match="/">
 <html>
 <head>
-	<title>Order </title>
+	<title>DVD Catalogue</title>
 </head>
 <body>
   <h1 style="text-align: center;" >DVD Catalog</h1>
