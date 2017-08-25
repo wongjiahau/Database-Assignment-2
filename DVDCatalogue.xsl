@@ -8,7 +8,7 @@
 </head>
 <body>
   <h1 style="text-align: center;" >DVD Catalog</h1>
-  <table width="100%" border="1px">
+  <table width="100%" border="1px" style="text-align: center;" >
     <tr style="background-color: black; color: white;" >
       <th>ID</th>
       <th>Title</th>
