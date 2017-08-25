@@ -10,7 +10,7 @@
       <keyStarsFeatured>
         <Star  Name=" Tobey Maguire"></Star>
         <Star  Name=" Kirsten Dunst"></Star>
-        <Star  Name="  Willem Dafoe"></Star>
+        <Star  Name=" Willem Dafoe"></Star>
       </keyStarsFeatured>
       <yearReleased>2002</yearReleased>
       <cost>20</cost>
@@ -24,11 +24,11 @@
       <keyStarsFeatured>
         <Star  Name=" Andrew Garfield"></Star>
         <Star  Name=" Sam Worthington"></Star>
-        <Star  Name="  Luke Bracey"></Star>
+        <Star  Name=" Luke Bracey"></Star>
       </keyStarsFeatured>
       <yearReleased>2016</yearReleased>
       <cost>25</cost>
-      <datePurchased>2017-02-15</datePurchased>
+      <datePurchased>2007-02-15</datePurchased>
       <purchaseQuantity>8</purchaseQuantity>
     </DVD>
     <DVD dvd_id="d3">
@@ -38,11 +38,11 @@
       <keyStarsFeatured>
         <Star  Name=" Vin Diesel"></Star>
         <Star  Name=" Paul Walker"></Star>
-        <Star  Name="  Dwayne Johnson"></Star>
+        <Star  Name=" Dwayne Johnson"></Star>
       </keyStarsFeatured>
       <yearReleased>2013</yearReleased>
       <cost>18</cost>
-      <datePurchased>2015-09-21</datePurchased>
+      <datePurchased>2005-09-21</datePurchased>
       <purchaseQuantity>12</purchaseQuantity>
     </DVD>
     <DVD dvd_id="d4">
@@ -52,7 +52,7 @@
       <keyStarsFeatured>
         <Star  Name=" Dwayne Johnson"></Star>
         <Star  Name=" Zac Efron"></Star>
-        <Star  Name="  Alexandra Daddario"></Star>
+        <Star  Name=" Alexandra Daddario"></Star>
       </keyStarsFeatured>
       <yearReleased>2017</yearReleased>
       <cost>15</cost>
@@ -66,7 +66,7 @@
       <keyStarsFeatured>
         <Star  Name=" Tom Cruise"></Star>
         <Star  Name=" Sofia Boutella"></Star>
-        <Star  Name="  Annabelle Wallis"></Star>
+        <Star  Name=" Annabelle Wallis"></Star>
       </keyStarsFeatured>
       <yearReleased>2017</yearReleased>
       <cost>22</cost>
@@ -80,11 +80,11 @@
       <keyStarsFeatured>
         <Star  Name=" Leonardo DiCaprio"></Star>
         <Star  Name=" Jonah Hill"></Star>
-        <Star  Name="  Margot Robbie"></Star>
+        <Star  Name=" Margot Robbie"></Star>
       </keyStarsFeatured>
       <yearReleased>2013</yearReleased>
       <cost>14</cost>
-      <datePurchased>2014-01-10</datePurchased>
+      <datePurchased>2004-01-10</datePurchased>
       <purchaseQuantity>10</purchaseQuantity>
     </DVD>
     <DVD dvd_id="d7">
@@ -94,11 +94,11 @@
       <keyStarsFeatured>
         <Star  Name=" Ben Affleck"></Star>
         <Star  Name=" Rosamund Pike"></Star>
-        <Star  Name="  Neil Patrick Harris"></Star>
+        <Star  Name=" Neil Patrick Harris"></Star>
       </keyStarsFeatured>
       <yearReleased>2014</yearReleased>
       <cost>20</cost>
-      <datePurchased>2015-12-10</datePurchased>
+      <datePurchased>2016-12-10</datePurchased>
       <purchaseQuantity>12</purchaseQuantity>
     </DVD>
     <DVD dvd_id="d8">
@@ -108,11 +108,11 @@
       <keyStarsFeatured>
         <Star  Name=" Ward Horton"></Star>
         <Star  Name=" Annabelle Wallis"></Star>
-        <Star  Name="  Alfre Woodard"></Star>
+        <Star  Name=" Alfre Woodard"></Star>
       </keyStarsFeatured>
       <yearReleased>2014</yearReleased>
       <cost>14</cost>
-      <datePurchased>2014-04-04</datePurchased>
+      <datePurchased>2017-04-04</datePurchased>
       <purchaseQuantity>15</purchaseQuantity>
     </DVD>
     <DVD dvd_id="d9">
@@ -122,11 +122,11 @@
       <keyStarsFeatured>
         <Star  Name=" Christian Bale"></Star>
         <Star  Name=" Michael Caine"></Star>
-        <Star  Name="  Ken Watanabe"></Star>
+        <Star  Name=" Ken Watanabe"></Star>
       </keyStarsFeatured>
       <yearReleased>2005</yearReleased>
       <cost>10</cost>
-      <datePurchased>2011-10-09</datePurchased>
+      <datePurchased>2004-10-09</datePurchased>
       <purchaseQuantity>5</purchaseQuantity>
     </DVD>
     <DVD dvd_id="d10">
@@ -136,7 +136,7 @@
       <keyStarsFeatured>
         <Star  Name=" Ewan McGregor"></Star>
         <Star  Name=" Liam Neeson"></Star>
-        <Star  Name="  Natalie Portman"></Star>
+        <Star  Name=" Natalie Portman"></Star>
       </keyStarsFeatured>
       <yearReleased>2005</yearReleased>
       <cost>10</cost>
@@ -148,36 +148,166 @@
   <CustomerList>
     <Customer customer_id="c1">
       <name>Wong Ah Kau</name>
-      <postAddress>16,Jalan Hock lee, Taman Ipoh, 31400, Ipoh, Perak </postAddress>
+      <postAddress>16,Jalan Hock lee, Taman Ipoh, 31400, Ipoh, Perak</postAddress>
       <email>AhKau@gmail.com</email>
       <dateOfBirth>1970-10-19</dateOfBirth>
       <dateJoined>2000-09-07</dateJoined>
       <ratingList>
         <rating dvd_id="d1" value="3" dateTime="2002-09-12T09:00:01"/>
-        <rating dvd_id="d2" value="2" dateTime="2002-09-11T10:10:09"/>
+        <rating dvd_id="d2" value="2" dateTime="2002-09-14T10:10:09"/>
       </ratingList>
       <commentList>
-        <comment dvd_id="d1" comment="good" dateTime="2002-09-12T23:10:11"/>
-        <comment dvd_id="d2" comment="okok" dateTime="2002-09-11T03:01:05"/>
+        <comment dvd_id="d1" comment="good" dateTime="2002-09-12T09:00:01"/>
+        <comment dvd_id="d2" comment="okok" dateTime="2002-09-14T10:10:09"/>
       </commentList>
     </Customer>
 
     <Customer customer_id="c2">
-      <name>Wong Ah Kau</name>
-      <postAddress>16,Jalan Hock lee, Taman Ipoh, 31400, Ipoh, Perak </postAddress>
-      <email>AhKau@gmail.com</email>
-      <dateOfBirth>1970-10-19</dateOfBirth>
-      <dateJoined>2000-07-07</dateJoined>
+      <name>Choy Yi Zhen</name>
+      <postAddress>92,Jalan Sungai Long, Taman Long, 33100, Mahkota, Kuala Lumpur</postAddress>
+      <email>chingms@1utar.my</email>
+      <dateOfBirth>1996-10-30</dateOfBirth>
+      <dateJoined>2010-10-17</dateJoined>
       <ratingList>
-        <rating dvd_id="d1" value="3" dateTime="2002-09-12T09:00:01"/>
-        <rating dvd_id="d2" value="2" dateTime="2002-09-11T10:10:09"/>
+        <rating dvd_id="d1" value="5" dateTime="2012-09-12T12:01:01"/>
+        <rating dvd_id="d3" value="2" dateTime="2012-09-13T13:11:09"/>
+        <rating dvd_id="d5" value="4" dateTime="2012-09-14T00:04:29"/>
       </ratingList>
       <commentList>
-        <comment dvd_id="d1" comment="good" dateTime="2002-09-12T23:10:11"/>
-        <comment dvd_id="d2" comment="okok" dateTime="2002-09-11T03:01:05"/>
+        <comment dvd_id="d1" comment="Best movie ever" dateTime="2012-09-12T12:01:01"/>
+        <comment dvd_id="d3" comment="Dissapointed" dateTime="2012-09-13T13:11:09"/>
+        <comment dvd_id="d5" comment="Better than expected" dateTime="2012-09-14T00:04:29"/>
       </commentList>
     </Customer>
+
+    <Customer customer_id="c3">
+      <name>Chin Zai Zai</name>
+      <postAddress>19,Jalan Sungai Hog Rider, Taman Giant, 33100, Johor</postAddress>
+      <email>chinzz@1utar.my</email>
+      <dateOfBirth>1982-11-11</dateOfBirth>
+      <dateJoined>2005-12-17</dateJoined>
+      <ratingList>
+        <rating dvd_id="d9" value="3" dateTime="2007-05-12T14:01:20"/>
+        <rating dvd_id="d10" value="2" dateTime="2011-03-13T10:11:09"/>
+      </ratingList>
+      <commentList>
+        <comment dvd_id="d9" comment="Nothing special" dateTime="2007-05-12T14:01:20"/>
+        <comment dvd_id="d10" comment="Too much expectation towards this movie" dateTime="2011-03-13T10:11:09"/>
+      </commentList>
+    </Customer>
+
+    <Customer customer_id="c4">
+      <name>Lim Da Zhong</name>
+      <postAddress>11,Jalan Single, Taman Forever, 33100, Sarawak</postAddress>
+      <email>limdz@1utar.my</email>
+      <dateOfBirth>1997-12-01</dateOfBirth>
+      <dateJoined>2010-09-23</dateJoined>
+      <ratingList>
+        <rating dvd_id="d2" value="4" dateTime="2012-07-15T12:15:20"/>
+        <rating dvd_id="d4" value="5" dateTime="2012-07-15T12:26:19"/>
+      </ratingList>
+      <commentList>
+        <comment dvd_id="d2" comment="Syok" dateTime="2012-07-15T12:15:20"/>
+        <comment dvd_id="d4" comment="Amazing" dateTime="2012-07-15T12:26:19"/>
+      </commentList>
+    </Customer>
+
+    <Customer customer_id="c5">
+      <name>Lufina</name>
+      <postAddress>22,Jalan Jalan, Taman Jungle, 31321, Brunei</postAddress>
+      <email>lufina@1utar.my</email>
+      <dateOfBirth>1980-08-31</dateOfBirth>
+      <dateJoined>2008-10-23</dateJoined>
+      <ratingList>
+        <rating dvd_id="d1" value="5" dateTime="2012-07-15T12:14:14"/>
+        <rating dvd_id="d3" value="4" dateTime="2012-07-15T12:36:45"/>
+      </ratingList>
+      <commentList>
+        <comment dvd_id="d1" comment="Recommeded" dateTime="2012-07-15T12:14:14"/>
+        <comment dvd_id="d3" comment="Impressed" dateTime="2012-07-15T12:36:45"/>
+      </commentList>
+    </Customer>
+
+    <Customer customer_id="c6">
+      <name>Yap Ben Ben</name>
+      <postAddress>26,Jalan Cypress, Taman walaoA, 12345, Cheras</postAddress>
+      <email>yapbb@1utar.my</email>
+      <dateOfBirth>1989-04-21</dateOfBirth>
+      <dateJoined>2011-05-23</dateJoined>
+      <ratingList>
+        <rating dvd_id="d1" value="4" dateTime="2012-07-15T12:15:20"/>
+        <rating dvd_id="d9" value="1" dateTime="2012-07-15T12:26:19"/>
+      </ratingList>
+      <commentList>
+        <comment dvd_id="d1" comment="Best of the year" dateTime="2012-07-15T12:15:20"/>
+        <comment dvd_id="d3" comment="Worst movie ever" dateTime="2012-07-15T12:26:19"/>
+      </commentList>
+    </Customer>
+
+    <Customer customer_id="c7">
+      <name>Hoo Mei Mei</name>
+      <postAddress>55,Jalan Utar, Taman Ratu, 99099, Klang</postAddress>
+      <email>hoomm@1utar.my</email>
+      <dateOfBirth>1960-07-01</dateOfBirth>
+      <dateJoined>2008-09-23</dateJoined>
+      <ratingList>
+        <rating dvd_id="d4" value="4" dateTime="2009-06-25T00:15:26"/>
+        <rating dvd_id="d5" value="3" dateTime="2014-01-06T22:22:51"/>
+      </ratingList>
+      <commentList>
+        <comment dvd_id="d1" comment="Love this kind of movie" dateTime="2009-06-25T00:15:26"/>
+        <comment dvd_id="d3" comment="Not really a fan" dateTime="2014-01-06T22:22:51"/>
+      </commentList>
+    </Customer>
+
+    <Customer customer_id="c8">
+      <name>Victor</name>
+      <postAddress>8,Jalan Game, Taman Engine, 12099, Petaling Jaya</postAddress>
+      <email>victor@1utar.my</email>
+      <dateOfBirth>1978-06-21</dateOfBirth>
+      <dateJoined>2009-03-12</dateJoined>
+      <ratingList>
+        <rating dvd_id="d2" value="3" dateTime="2017-02-14T22:05:56"/>
+        <rating dvd_id="d10" value="2" dateTime="2017-05-18T12:34:15"/>
+      </ratingList>
+      <commentList>
+        <comment dvd_id="d2" comment="" dateTime="2017-02-14T22:05:56"/>
+        <comment dvd_id="d10" comment="" dateTime="2017-05-18T12:34:15"/>
+      </commentList>
+    </Customer>
+
+    <Customer customer_id="c9">
+      <name>Felix Goh</name>
+      <postAddress>8,Jalan Fleet, Taman Cornaught, 129991, Cyber Jaya</postAddress>
+      <email>felixg@1utar.my</email>
+      <dateOfBirth>1988-06-21</dateOfBirth>
+      <dateJoined>2015-03-12</dateJoined>
+      <ratingList>
+        <rating dvd_id="d1" value="5" dateTime="2015-04-14T12:05:56"/>
+        <rating dvd_id="d5" value="3" dateTime="2017-09-08T22:34:59"/>
+      </ratingList>
+      <commentList>
+        <comment dvd_id="d2" comment="Good movie" dateTime="2015-04-14T12:05:56"/>
+        <comment dvd_id="d10" comment="Average" dateTime="2017-09-08T22:34:59"/>
+      </commentList>
+    </Customer>
+
+    <Customer customer_id="c10">
+      <name>Chan Suh Suh</name>
+      <postAddress>89,Jalan Sl4/2, Taman Mahkota, 32010, Perlis</postAddress>
+      <email>chanss@1utar.my</email>
+      <dateOfBirth>1998-12-21</dateOfBirth>
+      <dateJoined>2016-07-22</dateJoined>
+      <ratingList>
+        <rating dvd_id="d5" value="3" dateTime="2017-03-14T12:05:56"/>
+      </ratingList>
+      <commentList>
+        <comment dvd_id="d5" comment="Still worth watching" dateTime="2017-03-14T12:05:56"/>
+      </commentList>
+    </Customer>
+    
   </CustomerList>
+  
 
   <OrderList>
     <Order order_id="o1" customer_id="c1" dateTime="2002-09-10T05:17:55">
