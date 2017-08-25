@@ -11,7 +11,7 @@
 | cost             | The price of the DVD                                                                 | string    | No  | Yes     | 25,99                   | The minimum  cost is 1                                    |
 | datePurchased    | The date of this DVD being purchased by customer                                     | date      | No  | Yes     | 2015-09-21,2017-04-28   | No                                                        |
 | purchaseQuantity | The amount of purchase of this DVD                                                   | integer   | No  | Yes     | 1,6                     | The minimum value is 1                                    |
-                                                     |
+                                                   
 
 
 ## Customer
