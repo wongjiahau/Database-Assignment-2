@@ -1,0 +1,56 @@
+<!DOCTYPE DVDStore [
+
+<!ELEMENT DVDStore (DVDList, CustomerList, OrderList)>
+
+<!-- DVD information -->
+
+<!ELEMENT DVDList (DVD+)>
+<!ELEMENT DVD (title, format, genre, keyStarsFeatured, yearReleased, cost, dataPurchased, purchaseQuantity)>
+<!ELEMENT title (#PCDATA)>
+<!ELEMENT format (#PCDATA)>
+<!ELEMENT genre (#PCDATA)>
+<!ELEMENT keyStarsFeatured (Star+)>
+<!ELEMENT Star EMPTY>
+<!ELEMENT yearReleased (#PCDATA)>
+<!ELEMENT cost (#PCDATA)>
+<!ELEMENT dataPurchased (#PCDATA)>
+<!ELEMENT purchaseQuantity (#PCDATA)>
+  
+<!ATTLIST DVD dvd_id CDATA #REQUIRED>
+<!ATTLIST Star Name CDATA #REQUIRED>
+
+<!-- Customer information -->
+
+<!ELEMENT CustomerList (Customer+)>
+<!ELEMENT Customer (name, postAddress, email, dateOfBirth, dateJoined, ratingList, commentList)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT postAddress (#PCDATA)>
+<!ELEMENT email (#PCDATA)>
+<!ELEMENT dateOfBirth (#PCDATA)>
+<!ELEMENT dateJoined (#PCDATA)>
+<!ELEMENT ratingList (rating+)>
+<!ELEMENT rating EMPTY>
+<!ELEMENT commentList (comment+)>
+<!ELEMENT comment EMPTY>
+
+<!ATTLIST Customer customer_id CDATA #REQUIRED>
+<!ATTLIST rating dvd_id CDATA #REQUIRED>
+<!ATTLIST rating value CDATA #REQUIRED>
+<!ATTLIST rating dateTime CDATA #REQUIRED>
+<!ATTLIST comment dvd_id CDATA #REQUIRED>
+<!ATTLIST comment comment CDATA #REQUIRED>
+<!ATTLIST comment dateTime CDATA #REQUIRED>
+
+<!-- Order information -->
+
+<!ELEMENT OrderList (Order+)>
+<!ELEMENT Order (ItemList)>
+<!ELEMENT ItemList (Item+)>
+
+<!ATTLIST Order order_id CDATA #REQUIRED>
+<!ATTLIST Order customer_id CDATA #REQUIRED>
+<!ATTLIST Order dateTime CDATA #REQUIRED>
+<!ATTLIST Item dvd_id CDATA #REQUIRED>
+<!ATTLIST Item quantity CDATA #REQUIRED>
+
+]>
