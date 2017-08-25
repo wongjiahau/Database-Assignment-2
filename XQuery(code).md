@@ -65,3 +65,134 @@ for $highly_rated_dvd in $all_dvd[AverageRating > 3]
    <AverageRating>4.5</AverageRating>
 </DVD>
 ```
+
+Query 3 - List all the items sold from the beginning of time until now
+====
+### Input
+```xquery
+xquery version "1.0";
+let $all_sold_items := 
+	for $order in doc("XML-Document.xml")/DVDStore/OrderList/Order
+		return 		
+			for $item in $order/ItemList/Item
+				let $dvd_title := 
+					for $dvd in doc("XML-Document.xml")/DVDStore/DVDList/DVD
+					where $dvd/@dvd_id = $item/@dvd_id
+					return $dvd/title
+				let $dvd_cost := 
+					for $dvd in doc("XML-Document.xml")/DVDStore/DVDList/DVD
+					where $dvd/@dvd_id = $item/@dvd_id
+					return $dvd/cost
+				return <Item 
+					dvd_id = "{$item/@dvd_id}"
+					quantity = "{$item/@quantity}"			
+					dvd_title = "{$dvd_title}"
+					cost = "{$dvd_cost}"
+					dateTime = "{$order/@dateTime}"
+				/>
+return $all_sold_items
+```
+### Output
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<Item dvd_id="d1"
+      quantity="1"
+      dvd_title="Spiderman1"
+      cost="20"
+      dateTime="2015-08-10T05:17:55"/>
+<Item dvd_id="d2"
+      quantity="2"
+      dvd_title="Hacksaw Ridge"
+      cost="25"
+      dateTime="2015-08-10T05:17:55"/>
+<Item dvd_id="d1"
+      quantity="1"
+      dvd_title="Spiderman1"
+      cost="20"
+      dateTime="2016-08-15T09:22:55"/>
+<Item dvd_id="d3"
+      quantity="1"
+      dvd_title="Fast And Furious 6"
+      cost="18"
+      dateTime="2016-08-15T09:22:55"/>
+<Item dvd_id="d5"
+      quantity="1"
+      dvd_title="The Mummy"
+      cost="22"
+      dateTime="2016-08-15T09:22:55"/>
+<Item dvd_id="d9"
+      quantity="1"
+      dvd_title="Batman Begins"
+      cost="10"
+      dateTime="2013-02-10T12:54:55"/>
+<Item dvd_id="d10"
+      quantity="3"
+      dvd_title="Star Wars 1"
+      cost="10"
+      dateTime="2017-03-10T14:54:55"/>
+<Item dvd_id="d2"
+      quantity="2"
+      dvd_title="Hacksaw Ridge"
+      cost="25"
+      dateTime="2015-06-15T23:23:55"/>
+<Item dvd_id="d4"
+      quantity="2"
+      dvd_title="Baywatch"
+      cost="15"
+      dateTime="2015-06-15T23:23:55"/>
+<Item dvd_id="d1"
+      quantity="1"
+      dvd_title="Spiderman1"
+      cost="20"
+      dateTime="2014-05-09T11:23:55"/>
+<Item dvd_id="d3"
+      quantity="1"
+      dvd_title="Fast And Furious 6"
+      cost="18"
+      dateTime="2014-05-09T11:23:55"/>
+<Item dvd_id="d1"
+      quantity="1"
+      dvd_title="Spiderman1"
+      cost="20"
+      dateTime="2013-04-23T05:13:55"/>
+<Item dvd_id="d9"
+      quantity="1"
+      dvd_title="Batman Begins"
+      cost="10"
+      dateTime="2013-04-23T05:13:55"/>
+<Item dvd_id="d4"
+      quantity="1"
+      dvd_title="Baywatch"
+      cost="15"
+      dateTime="2014-05-15T23:23:55"/>
+<Item dvd_id="d5"
+      quantity="1"
+      dvd_title="The Mummy"
+      cost="22"
+      dateTime="2016-12-01T03:23:55"/>
+<Item dvd_id="d2"
+      quantity="3"
+      dvd_title="Hacksaw Ridge"
+      cost="25"
+      dateTime="2017-01-19T08:44:09"/>
+<Item dvd_id="d10"
+      quantity="1"
+      dvd_title="Star Wars 1"
+      cost="10"
+      dateTime="2017-01-19T08:44:09"/>
+<Item dvd_id="d1"
+      quantity="1"
+      dvd_title="Spiderman1"
+      cost="20"
+      dateTime="2015-01-25T10:24:09"/>
+<Item dvd_id="d5"
+      quantity="1"
+      dvd_title="The Mummy"
+      cost="22"
+      dateTime="2017-06-12T16:21:50"/>
+<Item dvd_id="d5"
+      quantity="1"
+      dvd_title="The Mummy"
+      cost="22"
+      dateTime="2017-02-28T06:53:25"/>
+```
