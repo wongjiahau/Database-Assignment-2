@@ -15,14 +15,14 @@
 
 
 ## Customer
-| Element name | Description                                             | Data type | PK  | Require | Examples               | Constraints                                               |
-|--------------|---------------------------------------------------------|-----------|-----|---------|------------------------|-----------------------------------------------------------|
-| customer_id  | Unique identifier for each customer                     | string    | Yes | Yes     | c12,c0                 | Must start with small letter 'c' and ends with an integer |
-| name         | The name of the customer                                | string    | No  | Yes     | Lawrence, Wong Fa Chai | Cannot contain all weird symbol except for this 3 '. -    |
-| postAddress  | The address of the customer                             | string    | No  | Yes     | 16,Jalan Hock lee,...  | No                                                        |
-| email        | The email address of customer                           | string    | No  | Yes     | JiaYu@gmail.com        | No                                                        |
-| dateOfBirth  | The date of customer born                               | date      | No  | Yes     | 2000-09-07,2011-09-11  | No                                                        |
-| dateJoined   | The date of the customer joined membership of this shop | date      | No  | Yes     | 2012-02-23,2018-09-04  | No                                                        |
+| Element name | Description                                             | Data type | PK  | Require | Examples               | Constraints                                                                            |
+|--------------|---------------------------------------------------------|-----------|-----|---------|------------------------|----------------------------------------------------------------------------------------|
+| customer_id  | Unique identifier for each customer                     | string    | Yes | Yes     | c12,c0                 | Must start with small letter 'c' and ends with an integer                              |
+| name         | The name of the customer                                | string    | No  | Yes     | Lawrence, Wong Fa Chai | Cannot contain all weird symbol except for this 3 following : Apostrophe, Dash, period |
+| postAddress  | The address of the customer                             | string    | No  | Yes     | 16,Jalan Hock lee,...  | No                                                                                     |
+| email        | The email address of customer                           | string    | No  | Yes     | JiaYu@gmail.com        | No                                                                                     |
+| dateOfBirth  | The date of customer born                               | date      | No  | Yes     | 2000-09-07,2011-09-11  | No                                                                                     |
+| dateJoined   | The date of the customer joined membership of this shop | date      | No  | Yes     | 2012-02-23,2018-09-04  | No                                                                                     |
 
 ## Order
 | Element name | Description                                   | Data type | PK  | Require | Examples            | Constraints                                               |
