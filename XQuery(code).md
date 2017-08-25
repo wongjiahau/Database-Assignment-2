@@ -255,3 +255,33 @@ let $all_sold_items :=
    <TotalQuantity>13</TotalQuantity>
 </Summary>
 ```
+
+Query 5 User want to search the DVD title end with 'my'
+===
+### Input
+```
+xquery version "1.0";
+for $x in doc("XML-Document.xml")/DVDStore/DVDList/DVD	 		
+	return
+	if(contains($x/title, 'my'))then ($x)
+	else()
+```
+### Output
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<DVD xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" dvd_id="d5">
+   <title>The Mummy</title>
+   <format>Bluray</format>
+   <genre>Adventure</genre>
+   <keyStarsFeatured>
+      <Star Name=" Tom Cruise"/>
+      <Star Name=" Sofia Boutella"/>
+      <Star Name=" Annabelle Wallis"/>
+   </keyStarsFeatured>
+   <yearReleased>2007</yearReleased>
+   <cost>22</cost>
+   <datePurchased>2007-07-22</datePurchased>
+   <purchaseQuantity>10</purchaseQuantity>
+</DVD>
+```
+
