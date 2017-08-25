@@ -31,7 +31,7 @@
 | datetime     | The date and time of the customer buy the DVD | dateTime  | No  | Yes     | 2002-09-10T05:17:55 | No                                                        |
 | quantity     | The purchase quantity of the DVD              | integer   | No  | Yes     | 1,100               | The minimum value is 1                                    |
 
-##Comment
+## Comment
 | Element name | Description                      | Data type | PK | Require | Examples            | Constraints |
 |--------------|----------------------------------|-----------|----|---------|---------------------|-------------|
 | comment      | The detail of the comment        | string    | No | Yes     | No bad,good         | No          |
