@@ -11,6 +11,15 @@
 | datePurchased    |                                                                                       |           |     |    |          |          |                                                           |
 | purchaseQuantity |                                                                                       |           |     |    |          |          |                                                           |
 
+
 ## Customer
+| Element name | Description | Data type | PK | FK | Nullable | Examples | Constraints |
+|--------------|-------------|-----------|----|----|----------|----------|-------------|
+| customer_id  |             |           |    |    |          |          |             |
+| name         |             |           |    |    |          |          |             |
+| postAddress  |             |           |    |    |          |          |             |
+| email        |             |           |    |    |          |          |             |
+| dateOfBirth  |             |           |    |    |          |          |             |
+| dateJoined   |             |           |    |    |          |          |             |
 
 ## Order
