@@ -1,11 +1,9 @@
-<!DOCTYPE DVDStore [
-
 <!ELEMENT DVDStore (DVDList, CustomerList, OrderList)>
 
 <!-- DVD information -->
 
 <!ELEMENT DVDList (DVD+)>
-<!ELEMENT DVD (title, format, genre, keyStarsFeatured, yearReleased, cost, dataPurchased, purchaseQuantity)>
+<!ELEMENT DVD (title, format, genre, keyStarsFeatured, yearReleased, cost, datePurchased, purchaseQuantity)>
 <!ELEMENT title (#PCDATA)>
 <!ELEMENT format (#PCDATA)>
 <!ELEMENT genre (#PCDATA)>
@@ -13,7 +11,7 @@
 <!ELEMENT Star EMPTY>
 <!ELEMENT yearReleased (#PCDATA)>
 <!ELEMENT cost (#PCDATA)>
-<!ELEMENT dataPurchased (#PCDATA)>
+<!ELEMENT datePurchased (#PCDATA)>
 <!ELEMENT purchaseQuantity (#PCDATA)>
   
 <!ATTLIST DVD dvd_id CDATA #REQUIRED>
@@ -46,11 +44,10 @@
 <!ELEMENT OrderList (Order+)>
 <!ELEMENT Order (ItemList)>
 <!ELEMENT ItemList (Item+)>
+<!ELEMENT Item EMPTY>
 
 <!ATTLIST Order order_id CDATA #REQUIRED>
 <!ATTLIST Order customer_id CDATA #REQUIRED>
 <!ATTLIST Order dateTime CDATA #REQUIRED>
 <!ATTLIST Item dvd_id CDATA #REQUIRED>
 <!ATTLIST Item quantity CDATA #REQUIRED>
-
-]>
