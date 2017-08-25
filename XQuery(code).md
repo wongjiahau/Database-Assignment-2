@@ -46,19 +46,22 @@ let $all_dvd :=
 		)
 	}
 	</DVD>
-return $all_dvd[AverageRating > 3]
+	
+for $highly_rated_dvd in $all_dvd[AverageRating > 3]
+	order by $highly_rated_dvd/AverageRating ascending 
+	return $highly_rated_dvd
 ```
 
 ### Output
 ```xquery
 <?xml version="1.0" encoding="UTF-8"?>
+<DVD dvd_id="d5" name="The Mummy">
+   <AverageRating>3.25</AverageRating>
+</DVD>
 <DVD dvd_id="d1" name="Spiderman1">
    <AverageRating>4.4</AverageRating>
 </DVD>
 <DVD dvd_id="d4" name="Baywatch">
    <AverageRating>4.5</AverageRating>
-</DVD>
-<DVD dvd_id="d5" name="The Mummy">
-   <AverageRating>3.25</AverageRating>
 </DVD>
 ```
