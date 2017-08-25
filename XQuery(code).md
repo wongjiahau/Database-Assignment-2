@@ -196,3 +196,62 @@ return $all_sold_items
       cost="22"
       dateTime="2017-02-28T06:53:25"/>
 ```
+
+Query 4 Total cost and quantity sold between August 2016 and August 2017
+====
+### Input
+```xquery
+let $all_sold_items := 
+	for $order in doc("XML-Document.xml")/DVDStore/OrderList/Order
+		return 		
+			for $item in $order/ItemList/Item
+				let $dvd_title := 
+					for $dvd in doc("XML-Document.xml")/DVDStore/DVDList/DVD
+					where $dvd/@dvd_id = $item/@dvd_id
+					return $dvd/title
+				let $dvd_cost := 
+					for $dvd in doc("XML-Document.xml")/DVDStore/DVDList/DVD
+					where $dvd/@dvd_id = $item/@dvd_id
+					return $dvd/cost
+				return <Item 
+					dvd_id = "{$item/@dvd_id}"
+					quantity = "{$item/@quantity}"			
+					dvd_title = "{$dvd_title}"
+					cost = "{$dvd_cost}"
+					dateTime = "{$order/@dateTime}"
+				/> 	
+			return 
+			<Summary>	
+				<TotalCost>
+				{
+				fn:sum(
+				let $total_cost :=
+						for $item in $all_sold_items
+						where ($item/@dateTime lt "2017-08-01T00:00:00") and ($item/@dateTime gt "2016-08-01T00:00:00")
+						return (sum($item/@cost))
+					return $total_cost
+					)
+					}
+					</TotalCost>
+					
+				<TotalQuantity>
+				{
+				fn:sum(
+				let $total_quantity :=
+					for $item in $all_sold_items
+					where($item/@dateTime lt "2017-08-01T00:00:00") and ($item/@dateTime gt "2016-08-01T00:00:00")
+					return (sum($item/@quantity))
+				return $total_quantity
+				)
+				}
+				</TotalQuantity>
+			</Summary>
+```
+### Output
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<Summary>
+   <TotalCost>171</TotalCost>
+   <TotalQuantity>13</TotalQuantity>
+</Summary>
+```
