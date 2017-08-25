@@ -36,3 +36,9 @@
 |--------------|----------------------------------|-----------|----|---------|---------------------|-------------|
 | comment      | The detail of the comment        | string    | No | Yes     | No bad,good         | No          |
 | datetime     | The date and time of the comment | dateTime  | No | Yes     | 2002-09-10T05:17:55 | No          |
+
+## Rating
+| Element name | Description                                     | Data type | PK | Require | Examples            | Constraints                            |
+|--------------|-------------------------------------------------|-----------|----|---------|---------------------|----------------------------------------|
+| value        | The rating value of the movie                   | integer   | No | Yes     | 3,1                 | The value of the rating is from 1 to 5 |
+| datetime     | The date and time of when customer doing rating | dateTime  | No | Yes     | 2002-09-10T05:17:55 | No                                     |
