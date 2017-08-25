@@ -6,7 +6,7 @@ Queries:
 
 3. DVDs title which include the specific keystar featured.
 
-4. Number of comments for DVD whichever has 3 star rating or above.
+4. Number of comments for DVD whichever has average of 3 star rating or above.
 
 5. DVDs with same genre released between specific range of years.
 
