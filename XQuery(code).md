@@ -1,4 +1,6 @@
-### Query 1 - Input
+Query 1 - Find the total number of customers who joined at 2012 January.
+====
+#### Input
 ```xquery
 xquery version "1.0";
 let $result := (
@@ -11,13 +13,15 @@ let $result := (
 )
 return <NoOfCustomerJoinedAt2012Jan>{count($result)}</NoOfCustomerJoinedAt2012Jan>
 ```
-### Query 1 - Output
+#### Output
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <NoOfCustomerJoinedAt2012Jan>4</NoOfCustomerJoinedAt2012Jan>
 ```
+Query 2 - List DVD(s) that has more than average rating of 3
+====
 
-### Query 2 - Input
+### Input
 ```xquery
 xquery version "1.0";
 let $all_dvd := 
@@ -45,7 +49,7 @@ let $all_dvd :=
 return $all_dvd[AverageRating > 3]
 ```
 
-### Query 2 - Output
+### Output
 ```xquery
 <?xml version="1.0" encoding="UTF-8"?>
 <DVD dvd_id="d1" name="Spiderman1">
