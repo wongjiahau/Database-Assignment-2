@@ -17,8 +17,6 @@
       <th>Key Stars Featured</th>
       <th>Year Released</th>
       <th>Cost</th>
-      <th>Date Purchased</th>
-      <th>Purchase Quantity</th>
     </tr>
       <xsl:for-each select="DVDStore/DVDList/DVD">
       <xsl:sort select="title"></xsl:sort>
@@ -35,8 +33,6 @@
         	</td>
         	<td><xsl:value-of select="yearReleased" /></td>
         	<td><xsl:value-of select="cost" /></td>
-        	<td><xsl:value-of select="datePurchased" /></td>
-        	<td><xsl:value-of select="purchaseQuantity" /></td>
     	</tr>
       </xsl:for-each>
 
