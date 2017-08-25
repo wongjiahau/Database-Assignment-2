@@ -32,7 +32,7 @@ Queries:
 
 10. Numbers of orders of DVDs in specific date (month or year).
 
-11. Customers total purchase cost and quantity in descending order.
+11. List the total_purchase_cost and total_quantity_purchased for each customer in descending order.
 
 12. DVDs title which include the specific keyStarFeatured between specific years range.
 
