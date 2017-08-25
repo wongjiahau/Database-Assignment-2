@@ -1,8 +1,9 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<!DOCTYPE DVDStore SYSTEM "DVDStore.dtd">
 <DVDStore xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-          xsi:noNamespaceSchemaLocation="XMLSchema1.xsd"
-          >
-  <DVDList>  
+    xsi:noNamespaceSchemaLocation="XMLSchema1.xsd">
+
+  <DVDList>
     <DVD dvd_id="d1">
       <title>Spiderman1</title>
       <format>DVD</format>
@@ -73,7 +74,7 @@
       <datePurchased>2017-07-22</datePurchased>
       <purchaseQuantity>10</purchaseQuantity>
     </DVD>
-    <DVD dvd_id="d6">
+    <DVD >
       <title>The Wolf Of Wall Street</title>
       <format>DVD</format>
       <genre>Biography</genre>
@@ -144,7 +145,7 @@
       <purchaseQuantity>5</purchaseQuantity>
     </DVD>
   </DVDList>
-  
+
   <CustomerList>
     <Customer customer_id="c1">
       <name>Wong Ah Kau</name>
