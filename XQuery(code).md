@@ -1,4 +1,5 @@
-```
+### 1
+```xquery
 xquery version "1.0";
 let $result := (
 	for $x in doc("XML-Document.xml")
