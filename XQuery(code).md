@@ -398,10 +398,8 @@ let $all_sold_items :=
 	for $order in doc("XML-Document.xml")/DVDStore/OrderList/Order
 		return 		
 			for $item in $order/ItemList/Item
-				let $matched_dvd := 
-					for $dvd in doc("XML-Document.xml")/DVDStore/DVDList/DVD
-					where $dvd/@dvd_id = $item/@dvd_id
-					return $dvd
+				let $matched_dvd := doc("XML-Document.xml")/DVDStore/DVDList/DVD
+[@dvd_id = $item/@dvd_id]
 				return <SoldItem 
 					order_id = "{$order/@order_id}"
 					dvd_id = "{$item/@dvd_id}"
@@ -425,11 +423,7 @@ let $sold_item_grouped_by_genres :=
 	for $genre in $distinct_genres
 	return
 	<SoldItemGroup genre = "{$genre}">
-	{
-		for $item in $all_sold_items 
-		return if($item/@genre = $genre) then ($item)
-		else()
-	}
+		{$all_sold_items[@genre=$genre]}
 	</SoldItemGroup>
 
 let $summaries_of_each_genre :=
