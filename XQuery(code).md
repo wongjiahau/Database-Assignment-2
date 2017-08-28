@@ -285,3 +285,90 @@ for $x in doc("XML-Document.xml")/DVDStore/DVDList/DVD
 </DVD>
 ```
 
+Query 11 - List the total item bought and total money spent of each customer 
+===
+### Input
+```xquery
+xquery version "1.0";
+let $all_sold_items := 
+	for $order in doc("XML-Document.xml")/DVDStore/OrderList/Order
+		return 		
+			for $item in $order/ItemList/Item
+				let $dvd_title := 
+					for $dvd in doc("XML-Document.xml")/DVDStore/DVDList/DVD
+					where $dvd/@dvd_id = $item/@dvd_id
+					return $dvd/title
+				let $dvd_cost := 
+					for $dvd in doc("XML-Document.xml")/DVDStore/DVDList/DVD
+					where $dvd/@dvd_id = $item/@dvd_id
+					return $dvd/cost
+				return <Item 
+					dvd_id = "{$item/@dvd_id}"
+					customer_id = "{$order/@customer_id}"
+					quantity = "{$item/@quantity}"			
+					dvd_title = "{$dvd_title}"
+					cost = "{$dvd_cost * $item/@quantity}"
+					dateTime = "{$order/@dateTime}"
+				/>
+let $all_customer_orders := 
+	for $customer in doc("XML-Document.xml")/DVDStore/CustomerList/Customer		
+	return 	<CustomerOrder customer_id="{$customer/@customer_id}" customer_name="{$customer/name}">
+			{
+				for $item in $all_sold_items
+				where $item/@customer_id = $customer/@customer_id
+				return $item
+			}
+			</CustomerOrder>
+			
+for $customer_order in $all_customer_orders
+return <CustomerSummary 	customer_id = "{$customer_order/@customer_id}" 
+						customer_name = "{$customer_order/@customer_name}"
+						total_item_bought = "{sum($customer_order/Item/@quantity)}"
+						money_spent = "{sum($customer_order/Item/@cost)}"
+						>
+</CustomerSummary>
+```
+### Output
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomerSummary customer_id="c1"
+                 customer_name="Wong Ah Kau"
+                 total_item_bought="3"
+                 money_spent="70"/>
+<CustomerSummary customer_id="c2"
+                 customer_name="Choy Yi Zhen"
+                 total_item_bought="3"
+                 money_spent="60"/>
+<CustomerSummary customer_id="c3"
+                 customer_name="Chin Zai Zai"
+                 total_item_bought="4"
+                 money_spent="40"/>
+<CustomerSummary customer_id="c4"
+                 customer_name="Lim Da Zhong"
+                 total_item_bought="4"
+                 money_spent="80"/>
+<CustomerSummary customer_id="c5"
+                 customer_name="Lufina"
+                 total_item_bought="2"
+                 money_spent="38"/>
+<CustomerSummary customer_id="c6"
+                 customer_name="Yap Ben Ben"
+                 total_item_bought="2"
+                 money_spent="30"/>
+<CustomerSummary customer_id="c7"
+                 customer_name="Hoo Mei Mei"
+                 total_item_bought="2"
+                 money_spent="37"/>
+<CustomerSummary customer_id="c8"
+                 customer_name="Victor"
+                 total_item_bought="4"
+                 money_spent="85"/>
+<CustomerSummary customer_id="c9"
+                 customer_name="Felix Goh"
+                 total_item_bought="2"
+                 money_spent="42"/>
+<CustomerSummary customer_id="c10"
+                 customer_name="Chan Suh Suh"
+                 total_item_bought="1"
+                 money_spent="22"/>
+```
