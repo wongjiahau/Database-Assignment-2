@@ -261,29 +261,28 @@ Query 5 User want to search the DVD title end with 'my'and within the date from 
 ### Input
 ```
 xquery version "1.0";
-
-
 declare namespace functx = "http://www.functx.com";
 declare function functx:between-inclusive
   ( $value as xs:anyAtomicType? ,
     $minValue as xs:anyAtomicType ,
     $maxValue as xs:anyAtomicType )  as xs:boolean {
-
-   $value >= $minValue and $value <= $maxValue
+	$value >= $minValue and $value <= $maxValue
  } ;
 
 for $x in doc("XML-Document.xml")/DVDStore/DVDList/DVD
  
 return
-if(contains($x/title, 'my'))then (
-if (functx:between-inclusive(xs:date($x/datePurchased),
-                       xs:date('2005-10-01'),
-                      xs:date('2007-10-01')))
+if(contains($x/title, 'my'))
+ 	then (
+    	if (functx:between-inclusive(xs:date($x/datePurchased),
+                      xs:date('2005-10-15'),
+                      xs:date('2007-11-01')))
                      
-then ($x)
-else ())
-else
-()
+				then ($x)
+		else ())
+	else()
+
+
 ```
 ### Output
 ```
@@ -304,7 +303,7 @@ else
 </DVD>
 ```
 
-Query 11 - List the total item bought and total money spent of each customer 
+Query 6 - List the total item bought and total money spent of each customer 
 ===
 ### Input
 ```xquery
