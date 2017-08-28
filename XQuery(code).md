@@ -390,3 +390,70 @@ return <CustomerSummary 	customer_id = "{$customer_order/@customer_id}"
                  total_item_bought="1"
                  money_spent="22"/>
 ```
+Query 7 - List popularity of genre of DVDs among customers based on purchase quantity.
+===
+```xquery
+xquery version "1.0";
+let $all_sold_items := 
+	for $order in doc("XML-Document.xml")/DVDStore/OrderList/Order
+		return 		
+			for $item in $order/ItemList/Item
+				let $matched_dvd := 
+					for $dvd in doc("XML-Document.xml")/DVDStore/DVDList/DVD
+					where $dvd/@dvd_id = $item/@dvd_id
+					return $dvd
+				return <SoldItem 
+					order_id = "{$order/@order_id}"
+					dvd_id = "{$item/@dvd_id}"
+					quantity = "{$item/@quantity}"			
+					dvd_title = "{$matched_dvd/title}"
+					cost = "{$matched_dvd/cost * $item/@quantity}"
+					genre = "{$matched_dvd/genre}"
+					dateTime = "{$order/@dateTime}"
+				/>
+
+let $all_genres := 
+	for $dvd in doc("XML-Document.xml")/DVDStore/DVDList/DVD
+	return <Genre>{$dvd/genre}</Genre>
+	
+let $distinct_genres :=
+	for $genre in distinct-values($all_genres)
+	return <Genre>{$genre}</Genre>
+
+
+let $sold_item_grouped_by_genres :=
+	for $genre in $distinct_genres
+	return
+	<SoldItemGroup genre = "{$genre}">
+	{
+		for $item in $all_sold_items 
+		return if($item/@genre = $genre) then ($item)
+		else()
+	}
+	</SoldItemGroup>
+
+let $summaries_of_each_genre :=
+	
+for $sold_item_group in $sold_item_grouped_by_genres
+	
+return <Genre 	value="{$sold_item_group/@genre}" 
+	
+				QuantitySold="{sum($sold_item_group/SoldItem/@quantity)}"
+	
+				MoneyMade="{sum($sold_item_group/SoldItem/@cost)}">
+	
+</Genre>
+
+for $summary in $summaries_of_each_genre 
+	order by $summary/@QuantitySold descending
+	return $summary										
+```
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<Genre value="Action" QuantitySold="9" MoneyMade="156"/>
+<Genre value="Adventure" QuantitySold="8" MoneyMade="128"/>
+<Genre value="Biography" QuantitySold="7" MoneyMade="175"/>
+<Genre value="Comedy" QuantitySold="3" MoneyMade="45"/>
+<Genre value="Mystery" QuantitySold="0" MoneyMade="0"/>
+<Genre value="Horror" QuantitySold="0" MoneyMade="0"/>
+```
