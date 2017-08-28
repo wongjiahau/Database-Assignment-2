@@ -457,3 +457,67 @@ for $summary in $summaries_of_each_genre
 <Genre value="Mystery" QuantitySold="0" MoneyMade="0"/>
 <Genre value="Horror" QuantitySold="0" MoneyMade="0"/>
 ```
+Query 10 - Numbers of orders of DVDs in specific date (month or year).
+====
+#### Input
+```xquery
+xquery version "1.0";
+let $all_sold_items := 
+	for $order in doc("XML-Document.xml")/DVDStore/OrderList/Order
+		return 		
+			for $item in $order/ItemList/Item
+				let $matched_dvd := 
+					for $dvd in doc("XML-Document.xml")/DVDStore/DVDList/DVD
+					where $dvd/@dvd_id = $item/@dvd_id
+					return $dvd
+				return <SoldItem 
+					order_id = "{$order/@order_id}"
+					dvd_id = "{$item/@dvd_id}"
+					quantity = "{$item/@quantity}"			
+					dvd_title = "{$matched_dvd/title}"
+					cost = "{$matched_dvd/cost * $item/@quantity}"
+					genre = "{$matched_dvd/genre}"
+					dateTime = "{$order/@dateTime}"
+				/>
+				
+let $all_title := 
+	for $dvd in doc("XML-Document.xml")/DVDStore/DVDList/DVD
+	return <Title>{$dvd/title}</Title>
+
+
+ 
+let $sold_item_group_by_titles :=
+	for $title in $all_title
+	return
+	<SoldItemGroup title = "{$title}">
+	{
+		for $item in $all_sold_items
+		return if($item/@dvd_title = $title) then ($item)
+		else ()
+	}
+	</SoldItemGroup>	
+				
+let $summaries_of_each_title :=
+	for $sold_item_group in $sold_item_group_by_titles
+	return <Title value="{$sold_item_group/@title}"
+			quantity="{sum($sold_item_group/SoldItem/@quantity)}">
+		</Title>
+		
+	for $summary in $summaries_of_each_title
+		order by $summary/@value ascending
+		return $summary
+```
+#### Output
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<Title value="Annabelle" quantity="0"/>
+<Title value="Batman Begins" quantity="2"/>
+<Title value="Baywatch" quantity="3"/>
+<Title value="Fast And Furious 6" quantity="2"/>
+<Title value="Gone Girl" quantity="0"/>
+<Title value="Hacksaw Ridge" quantity="7"/>
+<Title value="Spiderman1" quantity="5"/>
+<Title value="Star Wars 1" quantity="4"/>
+<Title value="The Mummy" quantity="4"/>
+<Title value="The Wolf Of Wall Street" quantity="0"/>
+```
