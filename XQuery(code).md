@@ -256,15 +256,34 @@ let $all_sold_items :=
 </Summary>
 ```
 
-Query 5 User want to search the DVD title end with 'my'
+Query 5 User want to search the DVD title end with 'my'and within the date from 2005-10-01 to 2007-10-01 and show the dvd detail
 ===
 ### Input
 ```
 xquery version "1.0";
-for $x in doc("XML-Document.xml")/DVDStore/DVDList/DVD	 		
-	return
-	if(contains($x/title, 'my'))then ($x)
-	else()
+
+
+declare namespace functx = "http://www.functx.com";
+declare function functx:between-inclusive
+  ( $value as xs:anyAtomicType? ,
+    $minValue as xs:anyAtomicType ,
+    $maxValue as xs:anyAtomicType )  as xs:boolean {
+
+   $value >= $minValue and $value <= $maxValue
+ } ;
+
+for $x in doc("XML-Document.xml")/DVDStore/DVDList/DVD
+ 
+return
+if(contains($x/title, 'my'))then (
+if (functx:between-inclusive(xs:date($x/datePurchased),
+                       xs:date('2005-10-01'),
+                      xs:date('2007-10-01')))
+                     
+then ($x)
+else ())
+else
+()
 ```
 ### Output
 ```
