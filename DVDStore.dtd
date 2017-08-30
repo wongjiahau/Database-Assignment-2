@@ -14,7 +14,7 @@
 <!ELEMENT datePurchased (#PCDATA)>
 <!ELEMENT purchaseQuantity (#PCDATA)>
   
-<!ATTLIST DVD dvd_id CDATA #REQUIRED>
+<!ATTLIST DVD dvd_id ID #REQUIRED>
 <!ATTLIST Star Name CDATA #REQUIRED>
 
 <!-- Customer information -->
@@ -31,11 +31,11 @@
 <!ELEMENT commentList (comment+)>
 <!ELEMENT comment EMPTY>
 
-<!ATTLIST Customer customer_id CDATA #REQUIRED>
-<!ATTLIST rating dvd_id CDATA #REQUIRED>
+<!ATTLIST Customer customer_id ID #REQUIRED>
+<!ATTLIST rating dvd_id IDREF #IMPLIED>
 <!ATTLIST rating value CDATA #REQUIRED>
 <!ATTLIST rating dateTime CDATA #REQUIRED>
-<!ATTLIST comment dvd_id CDATA #REQUIRED>
+<!ATTLIST comment dvd_id IDREF #IMPLIED>
 <!ATTLIST comment comment CDATA #REQUIRED>
 <!ATTLIST comment dateTime CDATA #REQUIRED>
 
@@ -46,8 +46,8 @@
 <!ELEMENT ItemList (Item+)>
 <!ELEMENT Item EMPTY>
 
-<!ATTLIST Order order_id CDATA #REQUIRED>
-<!ATTLIST Order customer_id CDATA #REQUIRED>
+<!ATTLIST Order order_id ID #REQUIRED>
+<!ATTLIST Order customer_id IDREF #IMPLIED>
 <!ATTLIST Order dateTime CDATA #REQUIRED>
-<!ATTLIST Item dvd_id CDATA #REQUIRED>
+<!ATTLIST Item dvd_id IDREF #IMPLIED>
 <!ATTLIST Item quantity CDATA #REQUIRED>
