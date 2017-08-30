@@ -442,6 +442,7 @@ for $summary in $summaries_of_each_genre
 	order by $summary/@QuantitySold descending
 	return $summary										
 ```
+### Output
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <Genre value="Action" QuantitySold="9" MoneyMade="156"/>
